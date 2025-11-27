@@ -1,0 +1,234 @@
+footer {
+    // padding: 0 2em;
+    background-color: #010D50;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+
+
+    .footer-inner {
+        margin: 0 8.5%; // giữ nguyên khoảng cách 17% hai bên
+        padding: 1.5em 2em 1.5em 2em;
+
+        .footer-top {
+            .footer-logo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .main-logo {
+                    display: flex;
+                    align-items: center;
+                    gap: 8%
+                }
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    gap: 0.8rem;
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 2em;
+                        height: 2em;
+                        border-radius: 50%;
+                        color: white;
+                        background: #f1e8e8;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #0048ff;
+                            transform: translateY(-3px);
+                        }
+
+                        svg {
+                            width: 1.5em;
+                            height: 1.5em;
+                            color: #e9e3e3;
+                        }
+                    }
+                }
+            }
+
+            .footer-main {
+                display: flex;
+                justify-content: space-between;
+                padding: 1.5em 0 5em 0;
+
+                .inline {
+                    width: 36%;
+                }
+
+                .footer-menu {
+                    color: #fff;
+
+                    h4 {
+                        padding: 1.5em 0;
+                        width: 55%;
+                        border-bottom: 1px solid #7b7b7b;
+                        margin: 0.5em 0;
+                    }
+
+                    .menu-columns {
+                        display: flex;
+                        gap: 6em; // khoảng cách giữa 2 cột
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding: 0;
+
+                        li {
+                            margin-bottom: 0.5rem;
+
+                            &:hover {
+                                color: #3b82f6;
+                            }
+                        }
+
+                        li a {
+                            color: #fff;
+                            font-size: 0.8em;
+                            text-decoration: none;
+
+                        }
+                    }
+                }
+
+                .footer-app {
+                    padding: 0.5em 0 2em 1.5em;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-radius: 25px;
+
+                    h4 {
+                        font-size: 1em;
+                    }
+
+                    p {
+                        font-size: 0.9em;
+                        width: 80%;
+                        line-height: 2;
+                    }
+
+                    .footer-buttons {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 1em;
+
+                        button {
+                            width: 35%;
+                            height: 8vh;
+                            border-radius: 80px;
+                            border: none;
+                            color: white;
+                            background-color: #0328EE;
+
+                            @media (max-width: 768px) {
+                                width: 42%;
+                                height: 5vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            margin: 0;
+            padding: 1em 0 0 0;
+            width: 100%;
+            border-top: 1px solid #7b7b7b;
+
+            p {
+                font-size: 0.9em;
+                color: #fff;
+                margin-bottom: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+}
+
+// @media (max-width: 1024px) {
+//     .footer {
+//         .footer-inner {
+//             .footer-top {
+//                 .footer-main {
+//                     .footer-menu {
+//                         button {
+//                             width: 40%;
+//                             height: 4vh;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 1em 0 2em 0;
+
+        .footer-inner {
+            padding: 0;
+
+            .footer-top {
+                .footer-logo {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1.5em;
+                }
+
+                .footer-main {
+                    display: flex;
+                    flex-direction: column;
+
+                    .inline {
+                        width: 100%;
+                        padding: 0
+                    }
+
+                    .footer-menu {
+                        h4 {
+                            width: 100%;
+                        }
+                    }
+
+                    .footer-app {
+                        padding-top: 0.8em;
+                        padding-bottom: 3em;
+
+                        h4 {
+                            padding: 0.5em 2em;
+                        }
+
+                        p {
+                            padding: 0 2em;
+                            margin-bottom: 1.5em;
+
+                        }
+
+                        .footer-buttons {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0 2em;
+
+                            .btn {
+                                width: 100%;
+                                font-size: 1em;
+                                height: 3.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

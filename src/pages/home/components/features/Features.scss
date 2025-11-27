@@ -1,0 +1,206 @@
+.features {
+    margin: 0 auto;
+    padding: 2.5em 0;
+    gap: 1em;
+    width: 80%;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            text-align: center;
+            font-size: $h2;
+        }
+
+        p {
+            width: 44%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: $body1;
+            line-height: 2;
+        }
+
+    }
+
+    .features__grid {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr 1fr;
+        gap: 1em;
+        grid-template-rows: 1fr 1fr;
+        /* Mỗi hàng có chiều cao bằng nhau */
+        align-items: stretch;
+        /* Căng các item cho cùng chiều cao */
+        justify-items: center;
+        padding: 4em 0 2em 0;
+
+        .feature-card {
+            background-color: #010D50;
+            border-radius: 25px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding-top: 3em;
+            padding-left: 1.8em;
+            gap: 0.3em;
+            padding-bottom: 0;
+
+            @media (max-width: 1024px) {
+                padding-top: 1em;
+            }
+
+            .features-icon {
+                width: 4.25em;
+                height: 4.25em;
+                border: 5px solid red;
+            }
+
+            h3 {
+                margin-top: 1em;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: $body1;
+                line-height: 2;
+                width: 100%;
+                padding-top: 0;
+            }
+
+        }
+
+        .feature-card--center {
+            display: flex;
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            background-color: #0040FF;
+            // align-items: center;
+            text-align-last: left;
+            padding-top: 2em;
+            padding-left: 1em;
+
+
+
+            p {
+                width: 100%;
+            }
+
+            img {
+                width: 75%;
+                padding-left: 1em;
+                // height: auto;
+                // position: relative;
+                // // right: 0.3em;
+            }
+        }
+    }
+
+    button {
+        width: 11.5rem;
+        height: 3.5rem;
+        background: #0328EE;
+        border-radius: 80px;
+        color: white;
+        font-size: $body2;
+        border: none;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+// @media (max-width: 1200px){
+//     .features{
+//         .features__grid {
+//             .feature-card {
+//                 padding-top: 1em;
+//                 padding-left: 1.5em;
+//                 gap: 0;
+//             }
+//         }
+//     }
+// } 
+@media (max-width: 945px) {
+    .features {
+        .features__grid {
+            .feature-card {
+                padding-top: 1em;
+                padding-left: 1em;
+                gap: 0em;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .features {
+        .features__grid {
+            .feature-card {
+                padding-top: 0.5em;
+                padding-left: 0.5em;
+                gap: 0.1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        .features__grid {
+            .feature-card {
+                padding-top: 1em;
+                padding-left: 1.5em;
+                gap: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .features {
+        padding: 0 0 4em 0;
+
+        .content {
+            gap: 1em;
+
+            h2,
+            p {
+                text-align: left;
+                margin: 0;
+                max-width: 80%;
+                width: 75%
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        .features__grid {
+            display: flex;
+            flex-direction: column;
+
+            .feature-card {
+                gap: 0.7em;
+                padding: 3em 2em;
+
+                h3 {
+                    font-size: 1.5em;
+                }
+            }
+
+            .feature-card--center {
+                padding-bottom: 0 !important;
+
+                img {
+                    width: 90%;
+                    height: auto;
+                    margin: 0 auto
+                }
+            }
+        }
+
+        .btn--download {
+            width: 45%
+        }
+    }
+}

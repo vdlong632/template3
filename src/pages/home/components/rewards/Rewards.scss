@@ -1,0 +1,212 @@
+.rewards {
+    display: flex;
+    flex-direction: column;
+    gap: 14rem;
+    padding: 4em 0 20em 0;
+    overflow-x: visible;
+
+
+
+    .rewards__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5em;
+        width: 80%;
+        margin: 0 auto;
+
+        .rewards__image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+
+            img {
+                // max-width: 500px;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        .rewards__content {
+            flex: 1;
+            text-align: left;
+
+            h2 {
+                font-size: 2.1em;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+                max-width: 80%;
+            }
+
+            p {
+                font-size: 0.9em;
+                line-height: 1.8;
+                color: #cfcfcf;
+                margin-bottom: 1.5em;
+                max-width: 80%;
+            }
+
+            .rewards__list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8em;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.6em;
+                    font-size: 0.9em;
+
+                    .icon {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+
+    .rewards__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4em;
+        padding-left: 10%;
+
+
+        .rewards__image {
+
+            img {
+                width: 80%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+        .rewards__mobile {
+            display: none;
+        }
+
+
+        .rewards__content {
+            flex: 1;
+            text-align: left;
+            h2 {
+                font-size: 2.1em;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+                max-width: 45%;
+            }
+
+            p {
+                font-size: 0.9em;
+                line-height: 1.8;
+                color: #cfcfcf;
+                margin-bottom: 1.5em;
+                max-width: 35%;
+            }
+
+            .rewards__list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8em;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.6em;
+                    font-size: 0.9em;
+
+                    .icon {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .rewards {
+        .rewards__top {
+            gap: 5em;
+            // width: 100%;
+            .rewards__content {
+                h2 {
+                    font-size: 1.7em;
+                    width: 91%;
+                }
+                // p {
+                //     width: 90%
+                // }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .rewards {
+        gap: 9em;
+        padding-bottom: 10em;
+        .rewards__top {
+            .rewards__image {
+                img {
+                    width: 90%
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .rewards {
+        padding: 2em 0 5em 0;
+        gap: 5em;
+        .rewards__top {
+            display: flex;
+            flex-direction: column;
+            gap: 3em !important;
+
+            .rewards__image {
+                img {
+                    width: 80%
+                }
+            }
+
+            .rewards__content {
+                h2 {
+                    font-size: 1.5em;
+                    max-width: 80%
+                }
+            }
+        }
+
+        .rewards__bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 2em !important;
+            max-width: 100% !important;
+
+            .rewards__image {
+                display: none;
+            }
+             .rewards__mobile {
+                display: block
+            }
+            .rewards__content {
+                h2 {
+                    font-size: 1.5em;
+                    text-align: left;
+                    max-width: 80%
+                }
+                p {
+                    max-width: 80%
+                }
+            }
+        }
+    }
+}

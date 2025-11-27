@@ -1,0 +1,192 @@
+.banner {
+    // height: 80%;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    position: relative;
+    padding: 2.3rem 0;
+    padding-left: 10%;
+    margin-right: calc(50% - 52vw);
+
+
+    .banner__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 50%;
+        position: relative;
+        z-index: 2;
+        overflow: visible;
+
+        h1 {
+            font-size: $h1;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            padding-block: 0.2em;
+        }
+
+        p {
+            font-size: $body1;
+            line-height: 1.6;
+            max-width: 70%;
+            margin: 0;
+        }
+
+        .contents__buttons {
+            display: flex;
+            gap: 1.5em;
+            padding: 1.5em 0;
+
+            .btn--download {
+                width: 11.5rem;
+                height: 3.5rem;
+                background: #0328EE;
+                border-radius: 80px;
+                color: white;
+                font-size: $body2;
+                border: none;
+            }
+
+            .btn--view {
+                width: 10rem;
+                height: 3.5rem;
+                background: #FFFFFF1A;
+                color: white;
+                border-radius: 80px;
+                border: none;
+                font-size: $body2;
+            }
+        }
+    }
+
+    .banner__img {
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
+        // right: calc((98.8vw - 100%) / -2);
+        // pointer-events: none;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .banner__img__mobile {
+        display: none;
+    }
+}
+
+
+//breakpoint Ipad
+@media (max-width: 900px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        text-align: left;
+        padding: 2em 0 1em 0;
+        margin-left: calc(50% - 50%);
+        margin-right: calc(50% - 50%);
+
+
+
+        .banner__content {
+            max-width: 100%;
+
+            h1 {
+                font-size: 2em;
+                float: left;
+            }
+
+            p {
+                max-width: 100%;
+                font-size: 0.95rem;
+            }
+
+            .contents__buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 2em 0;
+                gap: 0.8em;
+
+                .btn {
+                    width: 100%;
+                    height: 5em;
+                    margin-inline: auto;
+                }
+            }
+        }
+
+        .banner__img {
+            display: none
+        }
+
+        .banner__img__mobile {
+            display: block;
+            margin: 0 auto
+        }
+    }
+}
+
+
+//breakpoint Mobile
+// @media (max-width: 568px) {
+//     .banner {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: flex-start;
+//         align-items: flex-start;
+//         height: auto;
+//         text-align: left;
+//         padding: 2em 0 1em 0;
+
+//         .banner__content {
+//             // max-width: 100%;
+
+//             h1 {
+//                 font-size: 2em;
+//                 float: left;
+//             }
+
+//             p {
+//                 max-width: 100%;
+//                 font-size: 0.95rem;
+//             }
+
+//             .contents__buttons {
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//                 width: 100%;
+//                 padding: 2em 0;
+//                 gap: 0.8em;
+
+//                 .btn {
+//                     width: 96%;
+//                     margin-left: 0;
+//                     /* ✅ tự canh giữa, không cần transform */
+//                 }
+//             }
+//         }
+
+//         .banner__img {
+//             display: none
+//         }
+
+//         .banner__img__mobile {
+//             display: block;
+//             margin-inline: auto;
+//             width: 100%;
+//             position: relative;
+//             right: 3px;
+
+//         }
+//     }
+// }
