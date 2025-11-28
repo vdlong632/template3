@@ -4,6 +4,7 @@
 //component
 @import "../components/footer/Footer.scss";
 @import "../components/header/Header.scss";
+@import "../components/drawer/MobileDrawer.scss";
 
 //page Home
 @import "../pages/home/components/banner/Banner.scss";
@@ -30,8 +31,8 @@
 @import "../pages/tokens/Tokens.scss";
 
 //page Blog
-@import "../pages/blog/Components/title/Title.scss";
-@import "../pages/blog/Components/post/Post.scss";
+@import "../pages/blog/Components/title/BlogTitle.scss";
+@import "../pages/blog/Components/post/BlogPost.scss";
 
 //page Contact
 @import "../pages/contact/components/gettouch/GetTouch.scss";

@@ -19,7 +19,12 @@ footer {
                 .main-logo {
                     display: flex;
                     align-items: center;
-                    gap: 8%
+                    gap: 8%;
+
+                    img {
+                        width: 20%;
+                        // height: 5em
+                    }
                 }
 
                 ul {
@@ -69,7 +74,7 @@ footer {
 
                     h4 {
                         padding: 1.5em 0;
-                        width: 55%;
+                        width: 65%;
                         border-bottom: 1px solid #7b7b7b;
                         margin: 0.5em 0;
                     }

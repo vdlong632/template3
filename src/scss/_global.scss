@@ -37,3 +37,10 @@ button {
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) inset;
     }
 }
+
+
+@media (max-width: 576px){
+    body {
+        padding: 0 1em;
+    }
+} 
