@@ -23,13 +23,33 @@
             line-height: 1.8;
         }
     }
+
     ul {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         list-style: none;
         font-size: $h3;
         font-weight: 500;
         padding: 0;
+    }
+}
+
+@media (max-width: $mobile) {
+    .investors {
+        .heading {
+            width: 100%;
+
+            p {
+                width: 100%;
+            }
+        }
+
+        .brands {
+            li{
+                padding: 0.5em 0;
+            }
+        }
     }
 }

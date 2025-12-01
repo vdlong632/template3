@@ -26,3 +26,28 @@
             height: 38%
         }
 }
+
+@media (max-width: $mobile) {
+    .story{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .content{
+            width: 100%;
+            .text{
+                width: 100%;
+                p {
+                    width: 77%
+                }
+            }
+        }
+
+        img {
+            margin-top: 2em;
+            width: 120%;
+            height: 100%;
+            position: relative;
+            right: 1em;
+        }
+    }
+}

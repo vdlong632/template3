@@ -1,12 +1,13 @@
 .blogtitle {
   width: 100%;
   margin: 0 auto;
-  padding: 3em 0; // padding chung cho section
+  padding: 3em 0;
 
   /* ================== HEADING ================== */
   .inline {
     padding: 0 0 6em 0;
   }
+
   .heading {
     width: 80%;
     margin: 0 auto 40px;
@@ -35,7 +36,7 @@
     display: flex;
     background: $secondary;
     border-radius: 25px;
-    overflow: hidden; // để ảnh bo góc đúng
+    overflow: hidden;
     gap: 0;
 
     .content {
@@ -80,11 +81,52 @@
     }
   }
 
+  .blog-card {
+    background-color: #010D50;
+    border-radius: 25px;
+    display: none;
+
+    .blog-card__image {
+      position: relative;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px 25px 0 0;
+      }
+
+      .blog-card__tag {
+        position: absolute;
+        bottom: -12px;
+        left: 22%;
+        transform: translateX(-50%);
+        background: #0048ff;
+        color: #fff;
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        font-weight: 600;
+
+        @media (max-width: 1024px) {
+          left: 25%;
+        }
+
+        @media (max-width: 768px) {
+          left: 30%;
+        }
+
+        @media (max-width: 576px) {
+          left: 17%;
+        }
+      }
+    }
+  }
+
   /* ================== SUBSCRIBE BANNER ================== */
   .sub-banner {
     width: 100%;
     background: $primary;
-    padding: 3em 0; // chiều cao banner
+    padding: 3em 0;
 
     .inline-banner {
       width: 80%;
@@ -94,7 +136,6 @@
       justify-content: space-between;
       gap: 40px;
 
-      /* LEFT: icon + text */
       .title {
         flex: 1;
         display: flex;
@@ -121,7 +162,6 @@
         }
       }
 
-      /* RIGHT: pill input + button */
       .subscribe {
         flex: 1;
         display: flex;
@@ -131,14 +171,14 @@
           display: flex;
           align-items: center;
           background-color: #ffffff;
-          border-radius: 999px; 
+          border-radius: 999px;
           padding: 1em;
           width: 85%;
           max-width: 460px;
         }
 
         &__input {
-          flex: 1; // chiếm hết phần còn lại
+          flex: 1;
           border: none;
           outline: none;
           background: transparent;
@@ -153,16 +193,77 @@
 
         &__button {
           border: none;
-          border-radius: 999px; // bo tròn riêng cho nút
+          border-radius: 999px;
           padding: 1.5em;
-          background-color: #0040ff; // cùng tone nền
+          background-color: #0040ff;
           color: #ffffff;
           font-size: 13px;
           font-weight: 600;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           cursor: pointer;
-          white-space: nowrap; // không bị xuống dòng
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .blogtitle {
+    .inline {
+      .heading {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          width: 100%;
+          margin-bottom: 0.5em;
+        }
+
+        p {
+          width: 100%;
+          padding: 0;
+          line-height: 1.7
+        }
+      }
+      .features {
+        display: none;
+      }
+
+      .blog-card {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .sub-banner{
+      display: flex;
+      flex-direction: column;
+      .inline-banner{
+        display: flex; 
+        flex-direction: column;
+
+        .title{
+          display: flex;
+          flex-direction: column;
+
+          h2{
+            width: 80%
+          }
+        }
+
+        .subcrible{
+          form{
+            input{
+              display: block
+            }
+
+            button{
+              display: block;
+            }
+          }
         }
       }
     }

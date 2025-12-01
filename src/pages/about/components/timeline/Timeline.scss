@@ -58,3 +58,30 @@
         }
     }
 }
+@media (max-width: $mobile) {
+    .timeline{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        .intro {
+            width: 83%
+        }
+        .timeline-content{
+            width: 100%;
+             ul {
+                padding: 0;
+
+                li {
+                    width: 100%;
+                    gap: 1.5em;
+
+                    .marker{
+                        width: 3em;
+                        height: 1em;
+                    }
+                }
+             }
+              
+        }
+    }
+}

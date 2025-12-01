@@ -31,9 +31,10 @@ export default function MobileDrawer({ open, onClose }: Props) {
                         <Link to="/blog" onClick={onClose}>Blog</Link>
                     </li>
                     <li>
-                        <Link to="/contact" onClick={onClose}>Contact</Link>
+                        <Link to="/contact" onClick={onClose}>Contact Us</Link>
                     </li>
                 </ul>
+                <button className="btn-download">DOWNLOAD APP</button>
             </div>
         </div>
     );

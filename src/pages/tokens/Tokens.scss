@@ -52,16 +52,14 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
 
-      /* cột đầu (NAME) đậm hơn 1 chút giống design */
       td:first-child {
         font-weight: 600;
       }
 
-      /* cột cuối (Visit Website) */
       td:last-child {
         a {
           font-size: 13px;
-          color: #7b7b7b; // màu text link
+          color: #7b7b7b;
           text-decoration: underline;
 
           &:hover {
@@ -71,7 +69,6 @@
       }
     }
 
-    /* khoảng cách giữa các cột cho dễ đọc */
     th,
     td {
       padding-right: 32px;

@@ -55,20 +55,69 @@
                 gap: 1.25rem;
 
                 .logo {
-                    width:  6em;
+                    width: 6em;
                     height: 2.5em;
                     border-radius: 15px;
                     background: $primary;
                 }
+
                 span {
                     font-size: $h3;
                     font-weight: 600
                 }
+
                 p {
                     font-size: $body1;
                     width: 88%;
                     line-height: 1.8;
                     margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) {}
+
+@media (max-width: $mobile) {
+    .introduce {
+        .heading {
+            // width: 100%;
+            // text-align: left;
+            // display: flex;
+            // flex-direction: column;
+
+            h1 {
+                font-size: $h2;
+            }
+
+            p {
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        .main-content {
+            .reason-heading{
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    width: 80%
+                }
+            }
+            .reason-grid {
+                display: flex;
+                flex-direction: column;
+
+                .reason-card {
+                    display: flex;
+                    flex-direction: column;
+
+                    .logo {
+                        width: 3em;
+                        height: 3em
+                    }
                 }
             }
         }

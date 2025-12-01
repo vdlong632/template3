@@ -93,6 +93,19 @@
                 // // right: 0.3em;
             }
         }
+
+        @media (min-width: $tablet) {
+            .features__grid {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1.5rem;
+                grid-template-areas: 
+                "phone phone"
+                "send charts"
+                "wallet trading";
+            }
+            
+        }
     }
 
     button {
@@ -108,17 +121,6 @@
     }
 }
 
-// @media (max-width: 1200px){
-//     .features{
-//         .features__grid {
-//             .feature-card {
-//                 padding-top: 1em;
-//                 padding-left: 1.5em;
-//                 gap: 0;
-//             }
-//         }
-//     }
-// } 
 @media (max-width: 945px) {
     .features {
         .features__grid {

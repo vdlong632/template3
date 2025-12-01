@@ -1,0 +1,80 @@
+.gettouch {
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+        font-size: $h1;
+    }
+    label {
+        font-size: $body2;
+        font-weight: 600;
+    }
+
+    .contact-layout {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+
+        .contact-form {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+
+            form {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .column{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    input{
+                        width: 85%;
+                        border-radius: 80px;
+                        height: 3em;
+                        border: none;
+                        background: $secondary;
+                        padding: 0.3em 0 0.3em 1em;
+                        font-size: $body1;
+                        color: white;
+                        margin: 1em 0 2em 0
+                    }
+                }
+            }
+            .field {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                textarea {
+                    width: 94%;
+                    height: 8em;
+                    background: $secondary;
+                    border-radius: 15px;
+                    padding: 1em 0 0 1em;
+                    font-size: $body1;
+                    border: none;
+                    margin-top: 1em;
+                    color: white;
+                }
+            }
+            button {
+                width: 23%;
+                height: 4em;
+                border-radius: 80px;
+                background: $primary;
+                margin-top: 3em;
+                color: white;
+                font-size: $body2;
+            }
+            
+        }
+
+        .contact-info {
+            width: 32%
+        }
+
+    }
+}

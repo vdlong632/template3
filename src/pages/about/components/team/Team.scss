@@ -55,3 +55,23 @@
         }
     }
 }
+@media (max-width: $mobile) {
+    .team {
+        .team-title{
+            display: flex;
+            flex-direction: column;
+
+            h2{
+                margin:0;
+            }
+
+            p {
+                width: 80%
+            }
+        }
+        .team-grid{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
