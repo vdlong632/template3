@@ -41,7 +41,12 @@ const BlogTitle = () => {
             <div className="sub-banner">
                 <div className="inline-banner">
                     <div className="title">
-                        <div className="logo"></div>
+                        <div className="logo">
+                            <img
+                            src="/assets/letter.png"
+                            alt=""
+                            />
+                        </div>
                         <h2>Subscribe to our crypto news weekly newsletter!</h2>
                     </div>
                     <div className="subscribe">

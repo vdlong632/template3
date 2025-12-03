@@ -7,7 +7,7 @@ export default function MainLayout() {
     <>
       <Header />
 
-      <main style={{ minHeight: "70vh", padding: "20px 0" }}>
+      <main>
         <Outlet /> 
       </main>
 

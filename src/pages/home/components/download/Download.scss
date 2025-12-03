@@ -36,6 +36,7 @@
             flex-direction: column;
             padding-top: 1em;
             border-radius: 25px;
+            box-sizing: border-box;
 
             h2 {
                 padding-left: 1.5em;
@@ -48,7 +49,6 @@
                 word-wrap: break-word;
                 padding-left: 2.5em;
                 margin-top: 0
-
             }
 
             .btn {
@@ -57,7 +57,7 @@
                 height: 4em;
                 border-radius: 80px;
                 border: none;
-                margin:  0.5em 0 2.5em 2.5em;
+                margin: 0.5em 0 2.5em 2.5em;
                 color: white;
             }
 
@@ -69,9 +69,23 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .download-app {
-        .download-header{
+        .download-header {
+            h2 {
+                font-size: $h3;
+            }
+
+            p {
+                width: 58%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .download-app {
+        .download-header {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -79,12 +93,13 @@
             h2 {
                 margin: 0
             }
-            p{
+
+            p {
                 width: 77%;
                 margin-bottom: 0;
             }
         }
-        
+
         .download-area {
             display: flex;
             flex-direction: column;

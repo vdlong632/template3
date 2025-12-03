@@ -14,12 +14,16 @@
 
         h2 {
             margin: 0;
-            font-size: 2.1em;
+            font-size: $h2;
             max-width: 100%;
+
+            @media (max-width: 768px) {
+                font-size: $h3
+            }
         }
 
         p {
-            font-size: 0.9em;
+            font-size: $body1;
             color: #e0e7ff;
             width: 90%;
             line-height: 2;
@@ -36,7 +40,7 @@
             li {
                 display: flex;
                 align-items: center;
-                font-size: 0.9em;
+                font-size: $body1;
             }
         }
     }
@@ -49,17 +53,20 @@
         display: grid;
         place-items: center;
 
+        @media (max-width: 768px) {
+            width: 60%;
+            height: 55vh;
+        }
+
+        button{
+            background: none;
+        }
+
         .start_menu {
             svg {
                 width: 3em;
                 height: 3em;
-                // opacity: 0.9;
                 border-radius: 50%;
-            }
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.25);
-                transition: background 0.3s ease;
             }
         }
     }
@@ -74,7 +81,8 @@
     }
 }
 
-@media (max-width: 576px) {
+
+@media (max-width: 600px) {
     .invitation {
         display: flex;
         flex-direction: column;
@@ -89,6 +97,7 @@
 
             p {
                 max-width: 80%;
+
             }
 
             li {

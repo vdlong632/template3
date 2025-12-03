@@ -5,6 +5,7 @@
     h1 {
         font-size: $h1;
     }
+
     label {
         font-size: $body2;
         font-weight: 600;
@@ -25,13 +26,14 @@
                 display: flex;
                 justify-content: space-between;
 
-                .column{
-                    width: 100%;
+                .column {
+                    width: 48%;
                     display: flex;
                     flex-direction: column;
+                    gap: 1em;
 
-                    input{
-                        width: 85%;
+                    input {
+                        width: 100%;
                         border-radius: 80px;
                         height: 3em;
                         border: none;
@@ -43,13 +45,14 @@
                     }
                 }
             }
+
             .field {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
 
                 textarea {
-                    width: 94%;
+                    width: 100%;
                     height: 8em;
                     background: $secondary;
                     border-radius: 15px;
@@ -60,6 +63,7 @@
                     color: white;
                 }
             }
+
             button {
                 width: 23%;
                 height: 4em;
@@ -69,12 +73,108 @@
                 color: white;
                 font-size: $body2;
             }
-            
+
         }
 
         .contact-info {
-            width: 32%
+            width: 32%;
+
+            h3 {
+                font-size: $h3;
+                margin-top: 0
+            }
+
+            p {
+                font-size: $body1;
+                line-height: 1.8;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8em;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.6em;
+                    font-size: 0.9em;
+                }
+            }
         }
 
+    }
+}
+
+@media (max-width: $tablet) {
+    .gettouch {
+        width: 80%;
+        margin: 0 auto;
+
+        h1 {
+            font-size: $h2;
+        }
+
+        .contact-layout {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .contact-form {
+                width: 100%;
+
+                form {
+                    display: flex;
+                }
+            }
+
+            .contact-info{
+                width: 100%;
+
+                p{
+                    width: 70%
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .gettouch {
+        .contact-layout {
+            .contact-form {
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    .column {
+                        width: 95%
+                    }
+                }
+
+                .field{
+                    textarea{
+                        box-sizing: border-box;
+                        padding: 1em 0 0 1em;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    height: 4.5em
+                }
+            }
+
+            .contact-info {
+                width: 100%;
+
+                p{
+                    width: 86%
+                }
+            }
+        }
     }
 }

@@ -13,28 +13,44 @@ const Introduce = () => {
                 </div>
                 <div className="reason-grid">
                     <div className="reason-card">
-                        <div className="logo"></div>
+                        <div className="logo">
+                            <img
+                            src="/assets/send.png"
+                            />
+                        </div>
                         <div className="content">
                             <span>OPEN SOURCE</span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna in proin dui purus bibendum cras. Morbi cursus nunc.</p>
                         </div>
                     </div>
                     <div className="reason-card">
-                        <div className="logo"></div>
+                        <div className="logo">
+                            <img
+                            src="/assets/send.png"
+                            />
+                        </div>
                         <div className="content">
                             <span>WORLDWIDE</span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna in proin dui purus bibendum cras. Morbi cursus nunc.</p>
                         </div>
                     </div>
                     <div className="reason-card">
-                        <div className="logo"></div>
+                        <div className="logo">
+                            <img
+                            src="/assets/send.png"
+                            />
+                        </div>
                         <div className="content">
                             <span>TRANSPARENT</span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna in proin dui purus bibendum cras. Morbi cursus nunc.</p>
                         </div>
                     </div>
                     <div className="reason-card">
-                        <div className="logo"></div>
+                        <div className="logo">
+                            <img
+                            src="/assets/send.png"
+                            />
+                        </div>
                         <div className="content">
                             <span>COMMUNITY DRIVEN</span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et nibh urna in proin dui purus bibendum cras. Morbi cursus nunc.</p>

@@ -4,7 +4,7 @@
     align-items: center;
     overflow: visible;
     position: relative;
-    padding: 2.3rem 0;
+    padding: 2.3rem 0 0 0;
     padding-left: 10%;
     margin-right: calc(50% - 52vw);
 
@@ -136,57 +136,49 @@
 }
 
 
-//breakpoint Mobile
-// @media (max-width: 568px) {
-//     .banner {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: flex-start;
-//         align-items: flex-start;
-//         height: auto;
-//         text-align: left;
-//         padding: 2em 0 1em 0;
+// breakpoint Tablet
+@media (max-width: $tablet) {
+    .banner {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        text-align: left;
+        padding: 2em 0 1em 0;
 
-//         .banner__content {
-//             // max-width: 100%;
+        .banner__content {
+            // max-width: 100%;
 
-//             h1 {
-//                 font-size: 2em;
-//                 float: left;
-//             }
+            h1 {
+                font-size: $h2;
+                float: left;
+            }
 
-//             p {
-//                 max-width: 100%;
-//                 font-size: 0.95rem;
-//             }
+            p {
+                width: 80%;
+                font-size: $body1;
+            }
 
-//             .contents__buttons {
-//                 display: flex;
-//                 flex-direction: column;
-//                 align-items: center;
-//                 width: 100%;
-//                 padding: 2em 0;
-//                 gap: 0.8em;
+            .contents__buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 2em 0;
+                gap: 0.8em;
 
-//                 .btn {
-//                     width: 96%;
-//                     margin-left: 0;
-//                     /* ✅ tự canh giữa, không cần transform */
-//                 }
-//             }
-//         }
+                .btn {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
 
-//         .banner__img {
-//             display: none
-//         }
-
-//         .banner__img__mobile {
-//             display: block;
-//             margin-inline: auto;
-//             width: 100%;
-//             position: relative;
-//             right: 3px;
-
-//         }
-//     }
-// }
+        .banner__img {
+            display: none
+        }
+    }
+}

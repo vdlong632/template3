@@ -7,17 +7,17 @@ const GetTouch = () => {
                 <div className="contact-form">
                     <form>
                         <div className="column">
-                        <label>NAME</label>
-                        <input className="name" name="name" placeholder="Full Name"/>
-                        <label>COMPANY</label>
-                        <input className="company" name="company" placeholder="Company Name"/>
-                    </div>
-                    <div className="column">
-                        <label>EMAIL</label>
-                        <input className="email" name="email" placeholder="email@example.com"/>
-                        <label>SUBJECT</label>
-                        <input className="subject" name="subject" placeholder="How can we help?"/>
-                    </div>
+                            <label>NAME</label>
+                            <input className="name" name="name" placeholder="Full Name" />
+                            <label>COMPANY</label>
+                            <input className="company" name="company" placeholder="Company Name" />
+                        </div>
+                        <div className="column">
+                            <label>EMAIL</label>
+                            <input className="email" name="email" placeholder="email@example.com" />
+                            <label>SUBJECT</label>
+                            <input className="subject" name="subject" placeholder="How can we help?" />
+                        </div>
                     </form>
                     <div className="field">
                         <label>MESSAGE</label>

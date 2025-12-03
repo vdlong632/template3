@@ -38,6 +38,12 @@
                     height: 1em;
                     background: white;
                     border-radius: 50%;
+
+                    @media (max-width: $tablet) {
+                        width: 3.5em;
+                        height: 1em;
+                    }
+
                 }
 
                 .body {
@@ -45,10 +51,13 @@
                         margin-top: 0;
                         font-weight: 600;
                     }
+
                     .label {
-                        font-size: $body1;;
+                        font-size: $body1;
+                        ;
                         font-weight: 600;
                     }
+
                     .desc {
                         font-size: $body1;
                         line-height: 1.5
@@ -58,30 +67,35 @@
         }
     }
 }
-@media (max-width: $mobile) {
-    .timeline{
+
+
+@media (max-width: 600px) {
+    .timeline {
         display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 1em;
+
         .intro {
             width: 83%
         }
-        .timeline-content{
+
+        .timeline-content {
             width: 100%;
-             ul {
+
+            ul {
                 padding: 0;
 
                 li {
                     width: 100%;
                     gap: 1.5em;
 
-                    .marker{
-                        width: 3em;
+                    .marker {
+                        width: 2.3em;
                         height: 1em;
                     }
                 }
-             }
-              
+            }
+
         }
     }
 }

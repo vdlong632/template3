@@ -25,14 +25,26 @@ footer {
                         width: 20%;
                         // height: 5em
                     }
+
+                    // @media (max-width: $tablet) {
+                    //     display: flex;
+                    //     // justify-content: center;
+                    // }
                 }
 
                 ul {
                     list-style: none;
                     display: flex;
-                    gap: 0.8rem;
+                    gap: 1rem;
                     margin: 0;
                     padding: 0;
+
+                    @media (max-width: $mobile) {
+                        ul {
+                            display: flex;
+                            gap: 1.8em
+                        }
+                    }
 
                     li {
                         display: flex;
@@ -57,6 +69,8 @@ footer {
                             color: #e9e3e3;
                         }
                     }
+
+
                 }
             }
 
@@ -67,6 +81,10 @@ footer {
 
                 .inline {
                     width: 36%;
+
+                    @media (max-width: $tablet) {
+                        width: 50%
+                    }
                 }
 
                 .footer-menu {
@@ -81,7 +99,11 @@ footer {
 
                     .menu-columns {
                         display: flex;
-                        gap: 6em; // khoảng cách giữa 2 cột
+                        gap: 6em;
+
+                        @media (max-width: $tablet) {
+                            gap: 2em;
+                        }
                     }
 
                     ul {
@@ -98,7 +120,7 @@ footer {
 
                         li a {
                             color: #fff;
-                            font-size: 0.8em;
+                            font-size: $body2;
                             text-decoration: none;
 
                         }
@@ -115,7 +137,7 @@ footer {
                     }
 
                     p {
-                        font-size: 0.9em;
+                        font-size: $body1;
                         width: 80%;
                         line-height: 2;
                     }
@@ -133,9 +155,9 @@ footer {
                             color: white;
                             background-color: #0328EE;
 
-                            @media (max-width: 768px) {
-                                width: 42%;
-                                height: 5vh;
+                            @media (max-width: $tablet) {
+                                width: 44%;
+                                height: 3.5em;
                             }
                         }
                     }
@@ -176,7 +198,7 @@ footer {
 //     }
 // }
 
-@media (max-width: 576px) {
+@media (max-width: $mobile) {
     .footer {
         padding: 1em 0 2em 0;
 
@@ -188,7 +210,13 @@ footer {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-items: center;
                     gap: 1.5em;
+
+                    .main-logo{
+                        display: flex;
+                        justify-content: center;
+                    }
                 }
 
                 .footer-main {

@@ -55,7 +55,19 @@
         }
     }
 }
-@media (max-width: $mobile) {
+@media (max-width: 768px) {
+    .team{
+        .team-title{
+            h2{
+                font-size: $h3;
+            }
+            p{
+                width: 55%
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
     .team {
         .team-title{
             display: flex;

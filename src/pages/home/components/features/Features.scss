@@ -157,7 +157,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: $tablet) {
     .features {
         padding: 0 0 4em 0;
 
@@ -173,7 +173,11 @@
             }
 
             h2 {
-                font-size: 1.5em;
+                font-size: $h3;
+            }
+            p{
+                font-size: $body1;
+                width: 100%
             }
         }
 

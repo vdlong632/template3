@@ -15,7 +15,7 @@
 }
 
 .drawer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 90%;
@@ -26,6 +26,15 @@
     transform: translateX(-100%);
     transition: .35s ease;
     text-align: center;
+
+    .btn-download{
+        width: 80%;
+        border-radius: 80px;
+        color: white;
+        height: 4em;
+        background: #0328EE;
+        margin: 1em 0
+    }
 }
 
 .drawer-overlay.show .drawer {
@@ -59,3 +68,4 @@
         }
     }
 }
+

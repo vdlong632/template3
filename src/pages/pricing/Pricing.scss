@@ -33,10 +33,16 @@
             align-items: center;
 
             .logo {
-                width: 2.5em;
-                height: 2.5em;
+                width: 3em;
+                height: 3em;
                 background: $primary;
                 border-radius: 10px;
+                display: grid;
+                place-items: center;
+
+                img {
+                    width: 85%
+                }
             }
 
             p {
@@ -49,7 +55,7 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 24px;
-        margin-bottom: 12em;
+        margin-bottom: 8em;
         margin-top: 3em;
 
         .pricing-card {
@@ -60,32 +66,69 @@
             flex-direction: column;
             justify-content: space-between;
             box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+
+            h2 {
+                font-size: $h2;
+                ;
+                margin: 0
+            }
+
+            p {
+                line-height: 1.8
+            }
+
+            .features {
+                margin: 0;
+                width: 100%;
+                padding-top: 0;
+                font-size: $body1;
+                padding-bottom: 1em;
+
+                ul {
+                    padding-left: 1em;
+
+                    li {
+                        padding-bottom: 1em;
+                    }
+                }
+            }
+
+            button {
+                background-color: $primary;
+                width: 100%;
+                height: 4em;
+                border-radius: 80px;
+                border: none;
+                color: white;
+                font-size: $body1;
+            }
         }
     }
 }
 
-@media (max-width: $mobile) {
-    .pricing{
-        .heading{
-            h1{
+@media (max-width: $tablet) {
+    .pricing {
+        .heading {
+            h1 {
                 width: 100%;
             }
-            p{
+
+            p {
                 width: 100%;
                 text-align: left;
             }
         }
 
-        .options{
+        .options {
             display: flex;
             flex-direction: column;
 
-            .option{
+            .option {
                 margin: 0 0 1.5em 0
             }
         }
 
-        .pricing-grid{
+        .pricing-grid {
             display: flex;
             flex-direction: column;
         }

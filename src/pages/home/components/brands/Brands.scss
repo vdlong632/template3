@@ -22,18 +22,18 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet) {
   .brands {
     padding: 2.5em 0;
 
     p {
-      font-size: 0.85rem;
+      font-size: $body1;
       margin-bottom: 1em;
     }
 
     ul {
       li {
-        padding: 0.5em 0;
+        padding: 0.5em 1em;
       }
     }
   }

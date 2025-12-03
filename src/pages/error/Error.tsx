@@ -1,7 +1,10 @@
-
+import Header from "../../components/header/Header"
 const Error = () => {
     return (
-        <h1>Error</h1>
+        <>
+        <Header/>
+        <h1>ERROR</h1>
+        </>
     )
 }
 export default Error
