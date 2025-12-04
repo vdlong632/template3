@@ -1,0 +1,61 @@
+.pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 2rem 0;
+    }
+
+    /* nút chung */
+    .page-item {
+        min-width: 40px;
+        padding: 0.45rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: #010725;
+        color: #ffffff;
+        font-size: $body2;
+        cursor: pointer;
+    }
+
+    /* trang đang chọn */
+    .page-item.active {
+        background: #0054ff;
+        border-color: #0054ff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    /* hover */
+    .page-item:hover:not(.active):not(.disabled) {
+        border-color: #00eaff;
+        background: #071437;
+    }
+
+    /* Prev / Next */
+    .page-item.prev,
+    .page-item.next {
+        padding-inline: 1.1rem;
+        font-size: $body2;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    /* disabled */
+    .page-item.disabled {
+        opacity: 0.4;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    /* Responsive nhỏ: ẩn bớt số nếu cần */
+    @media (max-width: 480px) {
+        .pagination {
+            gap: 0.3rem;
+        }
+
+        .page-item:nth-child(4),
+        .page-item:nth-child(5) {
+            display: none;
+            /* ví dụ: ẩn bớt số để gọn */
+        }
+    }

@@ -4,7 +4,7 @@ const DetailPost = () => {
         <section className="detailpost">
             <div className="heading">
                 <div className="info-author">
-                    <img src="assets/author.png" alt="Alex Turner" className="card-author_img" />
+                    <img src="/assets/author.png" alt="Alex Turner" className="card-author_img" />
                     <div>
                         <p className="card__author-name">ALEX TURNER</p>
                         <p className="card__date">AUGUST 2, 2021</p>

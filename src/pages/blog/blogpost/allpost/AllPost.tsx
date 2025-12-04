@@ -1,3 +1,4 @@
+import Pagination from "../../../../components/pagination/Pagination"
 
 
 const AllPost = () => {
@@ -43,7 +44,7 @@ const AllPost = () => {
                             <h3 className="card__title">The Basics about Cryptocurrency</h3>
                             <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
                             <div className="card__footer">
-                                <img src="assets/author.png" alt="Alex Turner" className="card-author_img" />
+                                <img src="/assets/author.png" alt="Alex Turner" className="card-author_img" />
                                 <div>
                                     <p className="card__author-name">ALEX TURNER</p>
                                     <p className="card__date">AUGUST 2, 2021</p>
@@ -61,7 +62,7 @@ const AllPost = () => {
                             <h3 className="card__title">The Basics about Cryptocurrency</h3>
                             <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
                             <div className="card__footer">
-                                <img src="assets/author.png" alt="Alex Turner" className="card-author_img" />
+                                <img src="/assets/author.png" alt="Alex Turner" className="card-author_img" />
                                 <div>
                                     <p className="card__author-name">ALEX TURNER</p>
                                     <p className="card__date">AUGUST 2, 2021</p>
@@ -79,7 +80,7 @@ const AllPost = () => {
                             <h3 className="card__title">The Basics about Cryptocurrency</h3>
                             <p>Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.</p>
                             <div className="card__footer">
-                                <img src="assets/author.png" alt="Alex Turner" className="card-author_img" />
+                                <img src="/assets/author.png" alt="Alex Turner" className="card-author_img" />
                                 <div className="author-info">
                                     <p className="card__author-name">ALEX TURNER</p>
                                     <p className="card__date">AUGUST 2, 2021</p>
@@ -89,14 +90,7 @@ const AllPost = () => {
                     </article>
                 </div>
             </div>
-            <nav className="pagination" aria-label="Page navigation">
-                    <button className="page-item prev disabled" aria-disabled="true">Prev</button>
-                    <button className="page-item active" aria-current="page">1</button>
-                    <button className="page-item">2</button>
-                    <button className="page-item">3</button>
-                    <button className="page-item">4</button>
-                    <button className="page-item next">Next</button>
-                </nav>
+            {/* <Pagination/> */}
         </section>
     )
 }

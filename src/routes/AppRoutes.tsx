@@ -9,7 +9,7 @@ import Blog from "../pages/blog/Blog";
 import Contact from "../pages/contact/Contact";
 import ErrorPage from "../pages/error/Error";
 import BlogPost from "../pages/blog/BlogPost";
-import Test from "../pages/test/Text";
+import Test from "../pages/test/Test";
 
 export default function AppRoutes() {
   return (

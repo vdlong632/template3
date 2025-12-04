@@ -5,6 +5,7 @@
 @import "../components/footer/Footer.scss";
 @import "../components/header/Header.scss";
 @import "../components/drawer/MobileDrawer.scss";
+@import "../components/pagination/Pagination.scss";
 
 //page Home
 @import "../pages/home/components/banner/Banner.scss";
@@ -33,6 +34,7 @@
 //page Blog
 @import "../pages/blog/Components/title/BlogTitle.scss";
 @import "../pages/blog/Components/post/BlogPost.scss";
+@import "../pages/blog/Components/blogcard/BlogCard.scss";
 
 //page BlogPost
 @import "../pages/blog/blogpost/allpost/AllPost.scss";

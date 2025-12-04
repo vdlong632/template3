@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import Pagination from "../../../../components/pagination/Pagination";
+import { useState } from "react";
+import BlogCard from "../blogcard/BlogCard";
 
 const posts = [
   {
@@ -6,6 +9,7 @@ const posts = [
     slug: "the-basics-about-crypto-1",
     title: "The Basics about Cryptocurrency",
     tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
     date: "AUGUST 2, 2021",
     author: "ALEX TURNER",
     thumb: "/assets/divLaptop.png",
@@ -15,6 +19,7 @@ const posts = [
     slug: "the-basics-about-crypto-2",
     title: "The Basics about Cryptocurrency",
     tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
     date: "AUGUST 2, 2021",
     author: "ALEX TURNER",
     thumb: "/assets/divLaptop.png",
@@ -24,14 +29,89 @@ const posts = [
     slug: "the-basics-about-crypto-3",
     title: "The Basics about Cryptocurrency",
     tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
     date: "AUGUST 2, 2021",
     author: "ALEX TURNER",
     thumb: "/assets/divLaptop.png",
   },
-  // ...
+  {
+    id: 4,
+    slug: "the-basics-about-crypto-4",
+    title: "The Basics about Cryptocurrency",
+    tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    date: "AUGUST 2, 2021",
+    author: "ALEX TURNER",
+    thumb: "/assets/divLaptop.png",
+  },
+  {
+    id: 5,
+    slug: "the-basics-about-crypto-5",
+    title: "The Basics about Cryptocurrency",
+    tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    date: "AUGUST 2, 2021",
+    author: "ALEX TURNER",
+    thumb: "/assets/divLaptop.png",
+  },
+  {
+    id: 6,
+    slug: "the-basics-about-crypto-6",
+    title: "The Basics about Cryptocurrency",
+    tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    date: "AUGUST 2, 2021",
+    author: "ALEX TURNER",
+    thumb: "/assets/divLaptop.png",
+  },
+  {
+    id: 7,
+    slug: "the-basics-about-crypto-7",
+    title: "The Basics about Cryptocurrency",
+    tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    date: "AUGUST 2, 2021",
+    author: "ALEX TURNER",
+    thumb: "/assets/divLaptop.png",
+  },
+  {
+    id: 8,
+    slug: "the-basics-about-crypto-8",
+    title: "The Basics about Cryptocurrency",
+    tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    date: "AUGUST 2, 2021",
+    author: "ALEX TURNER",
+    thumb: "/assets/divLaptop.png",
+  },
+  {
+    id: 9,
+    slug: "the-basics-about-crypto-9",
+    title: "The Basics about Cryptocurrency",
+    tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    date: "AUGUST 2, 2021",
+    author: "ALEX TURNER",
+    thumb: "/assets/divLaptop.png",
+  },
+  {
+    id: 10,
+    slug: "the-basics-about-crypto-10",
+    title: "The Basics about Cryptocurrency",
+    tag: "PRODUCTS",
+    text: "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    date: "AUGUST 2, 2021",
+    author: "ALEX TURNER",
+    thumb: "/assets/divLaptop.png",
+  },
 ];
 
 const BlogPost = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentPosts = posts.slice(startIndex, startIndex + itemsPerPage);
   return (
     <section className="blogpost">
       <div className="post-title">
@@ -46,51 +126,18 @@ const BlogPost = () => {
 
       <div className="post-card">
         <div className="post-grid">
-          {posts.map((post) => (
-            <Link
-              key={post.id}
-              to={`/blogpost/${post.id}`}  // ← route sang page mới
-              className="blog-card"       // giữ nguyên class để CSS không đổi
-            >
-              <div className="blog-card__image">
-                <img src={post.thumb} alt={post.title} />
-                <span className="blog-card__tag">{post.tag}</span>
-              </div>
+          {currentPosts.map((post) => (
+            <BlogCard key={post.slug} post={post} />
 
-              <div className="card__content">
-                <h3 className="card__title">{post.title}</h3>
-                <p>
-                  Lorem ipsum dolor sit ametero irseo, consectetur adipiscing
-                  elit. Scelerisque viverra donec diammeo.
-                </p>
-                <div className="card__footer">
-                  <img
-                    src="/assets/author.png"
-                    alt={post.author}
-                    className="card-author_img"
-                  />
-                  <div className="author-info">
-                    <p className="card__author-name">{post.author}</p>
-                    <p className="card__date">{post.date}</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
           ))}
         </div>
 
-        <nav className="pagination" aria-label="Page navigation">
-          <button className="page-item prev disabled" aria-disabled="true">
-            Prev
-          </button>
-          <button className="page-item active" aria-current="page">
-            1
-          </button>
-          <button className="page-item">2</button>
-          <button className="page-item">3</button>
-          <button className="page-item">4</button>
-          <button className="page-item next">Next</button>
-        </nav>
+        <Pagination
+          currentPage={currentPage}
+          itemsPerPage={itemsPerPage}
+          totalItems={posts.length}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </section>
   );
