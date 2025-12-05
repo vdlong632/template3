@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import Pagination from "../../../../components/pagination/Pagination";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlogCard from "../blogcard/BlogCard";
 
+// Dữ liệu mock list bài viết
 const posts = [
   {
     id: 1,
@@ -107,11 +108,55 @@ const posts = [
 ];
 
 const BlogPost = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  // Số lượng bài trên mỗi page
   const itemsPerPage = 6;
 
+  // -------------------------
+  // 🟦 1. Lấy giá trị "page" từ URL
+  // -------------------------
+
+  // Hook của React Router để đọc & ghi search params (?page=2)
+  const [searchParams, setSearchParams] = useSearchParams();
+  // Ép kiểu sang number. Nếu không có ?page thì mặc định = 1
+  const pageFromUrl = Number(searchParams.get("page")) || 1;
+
+  // -------------------------
+  // 🟦 2. Tạo state để quản lý current page
+  // -------------------------
+  // currentPage khởi tạo bằng page lấy từ URL
+  const [currentPage, setCurrentPage] = useState(pageFromUrl);
+
+  // -------------------------
+  // 🟦 3. Đồng bộ state khi URL thay đổi
+  // Ví dụ người dùng: nhấn Back/Forward hoặc gõ tay ?page=3
+  // -------------------------
+  useEffect(() => {
+    // Nếu URL và state khác nhau thì cập nhật lại
+    if (pageFromUrl !== currentPage) {
+      setCurrentPage(pageFromUrl);
+    }
+  }, [pageFromUrl]);
+  // Hook chạy khi pageFromUrl thay đổi
+
+  // -------------------------
+  // 🟦 4. Tính toán bài viết cần render theo từng page
+  // -------------------------
+
+  // Vị trí bắt đầu của page hiện tại
   const startIndex = (currentPage - 1) * itemsPerPage;
+  // Lấy ra danh sách bài tương ứng với page hiện tại
   const currentPosts = posts.slice(startIndex, startIndex + itemsPerPage);
+
+  // -------------------------
+  // 🟦 5. Hàm đổi trang (pagination)
+  // -------------------------
+  const handlePageChange = (page: number) => {
+    // Cập nhật state page nội bộ UI
+    setCurrentPage(page);
+    // Cập nhật URL: ví dụ /blog?page=3
+    setSearchParams({ page: String(page) }); // SearchParams chỉ nhận string
+  };
+
   return (
     <section className="blogpost">
       <div className="post-title">
@@ -131,14 +176,13 @@ const BlogPost = () => {
 
           ))}
         </div>
-
-        <Pagination
-          currentPage={currentPage}
-          itemsPerPage={itemsPerPage}
-          totalItems={posts.length}
-          onPageChange={setCurrentPage}
-        />
       </div>
+      <Pagination
+        currentPage={currentPage}        // Page hiện tại
+        itemsPerPage={itemsPerPage}      // Số bài mỗi trang
+        totalItems={posts.length}        // Tổng số bài
+        onPageChange={handlePageChange}  // Hàm xử lý khi đổi trang
+      />
     </section>
   );
 };

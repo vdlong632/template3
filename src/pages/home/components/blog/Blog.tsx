@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Blog = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="blog">
             <div className="blog-header">
@@ -60,7 +64,10 @@ const Blog = () => {
                     </div>
                 </article>
             </div>
-            <button className="btn-view">VIEW ALL ARTICLES</button>
+            <button 
+            className="btn-view"
+            onClick={() => navigate("/blog")}
+            >VIEW ALL ARTICLES</button>
         </section>
         
     )

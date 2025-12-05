@@ -1,20 +1,16 @@
-    const colors = [
-        {
-            id: 1,
-            name: "Long"
-        },
-        {
-            id: 2,
-            name: "Long"
-        }
-    ]
-
+import { useState } from "react"
 
 const Test = () => {
-    return(
-        <>
-        
-        </>
-    )
-}
+  const [text, setText] = useState("");
+
+  return (
+    <div>
+      <input 
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <p>Bạn nhập: {text}</p>
+    </div>
+  );
+};
 export default Test

@@ -1,6 +1,7 @@
-// import Laptop from './Laptop.png'
-// import './Banner.scss'
+import { useNavigate } from "react-router-dom";
+
 const Banner = () => {
+    const navigate = useNavigate();
     return (
         <section className='banner'>
             <div className="banner__content">
@@ -8,7 +9,10 @@ const Banner = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean dis placerat.</p>
                 <div className="contents__buttons">
                     <button className="btn btn--download">DOWNLOAD APP</button>
-                    <button className="btn btn--view">VIEW PRICING</button>
+                    <button 
+                    className="btn btn--view"
+                    onClick={() => navigate("/pricing")}
+                    >VIEW PRICING</button>
                 </div>
             </div>
 
